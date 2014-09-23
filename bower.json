@@ -1,0 +1,23 @@
+{
+  name: 'angular-clear-input',
+  version: '0.0.1',
+  homepage: 'https://github.com/sebastianhenneberg/angular-clear-input',
+  authors: [
+    'Sebastian Henneberg'
+  ],
+  description: 'A clear input plugin for AngularJS',
+  keywords: [
+    'angular',
+    'input',
+    'clear'
+  ],
+  main: 'angular-clear-input.js',
+  license: 'MIT',
+  ignore: [
+    '**/.*',
+    'node_modules',
+    'bower_components',
+    'test',
+    'tests'
+  ]
+}
