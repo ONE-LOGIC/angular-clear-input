@@ -8,7 +8,7 @@ angular.module('dcbClearInput', [])
             return {
                 restrict: 'A',
                 require: 'ngModel',
-                link: function(scope, element, attr) {
+                link: function(scope, element, attr, ngModel) {
                     var htmlMarkup = attr.clearBtnMarkup ? attr.clearBtnMarkup : '<span>&times;</span>';
                     var btn = angular.element(htmlMarkup);
                     btn.addClass(attr.clearBtnClass ? attr.clearBtnClass : "clear-btn");
@@ -23,8 +23,8 @@ angular.module('dcbClearInput', [])
                                 });
                             });
                         } else {
-                            scope[attr.ngModel] = null;
-                            scope.$digest();
+                            ngModel.$setViewValue(null);
+                            ngModel.$render();
                         }
                     });
 
